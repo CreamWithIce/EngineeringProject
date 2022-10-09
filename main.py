@@ -2,6 +2,11 @@ import keyboard
 import mouse
 import time
 from playsound import playsound
+from pygame import mixer
+
+mixer.init()
+
+mixer.music.load("train_Crossing_Bell.mp3")
 
 t = time.time()
 timePassed = time.time() - t
@@ -17,9 +22,10 @@ while True:
             timePassed = 0
             t = time.time()
     if (timePassed > maxTime):
-        playsound(u'train_Crossing_Bell.mp3')
+        mixer.music.play()
         timePassed = 0
         t = time.time()
+        
 
     second_pos = mouse.get_position()
 
