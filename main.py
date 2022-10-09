@@ -17,7 +17,7 @@ while True:
             timePassed = 0
             t = time.time()
     if (timePassed > maxTime):
-        playsound('Test.wav')
+        playsound(u'train_Crossing_Bell.mp3')
         timePassed = 0
         t = time.time()
 
