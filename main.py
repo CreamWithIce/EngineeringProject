@@ -22,9 +22,10 @@ while True:
             mixer.music.pause()
             timePassed = 0
             t = time.time()
+            
     if (timePassed > maxTime):
         mixer.music.unpause()
-        mixer.music.play()
+        mixer.music.play(loops=-1)
         timePassed = 0
         t = time.time()
         
@@ -32,6 +33,7 @@ while True:
     second_pos = mouse.get_position()
 
     if(second_pos != first_pos):
+        mixer.music.pause()
         timePassed = 0
         t = time.time()
 
