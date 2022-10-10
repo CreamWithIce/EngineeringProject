@@ -19,9 +19,11 @@ while True:
     first_pos = mouse.get_position()
     for i in range(len(alphabet)):
         if(keyboard.is_pressed(alphabet[i])==True):
+            mixer.music.pause()
             timePassed = 0
             t = time.time()
     if (timePassed > maxTime):
+        mixer.music.unpause()
         mixer.music.play()
         timePassed = 0
         t = time.time()
