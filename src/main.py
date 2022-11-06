@@ -7,7 +7,7 @@ def main():
 
     mixer.init()
 
-    mixer.music.load("train_Crossing_Bell.mp3")
+    mixer.music.load("jsbarrett_train-crossing.wav")
 
     t = time()
     timePassed = time() - t
